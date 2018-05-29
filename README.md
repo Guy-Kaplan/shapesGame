@@ -14,3 +14,5 @@ The game's shapes are:
 9. Circle
 10. Gradient Ellipse
 11. Two Colors Circle
+
+## Click [here](https://guy-kaplan.github.io/shapesGame/) to play the game
