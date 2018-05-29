@@ -1,7 +1,7 @@
 # shapesGame
 A game that draws a shape designed by the user choices, written in TypeScript.
 
-The game's shapes are:
+**The game's shapes are:**
 
 1. Square
 2. Rectangle
@@ -16,3 +16,7 @@ The game's shapes are:
 11. Two Colors Circle
 
 ## Click [here](https://guy-kaplan.github.io/shapesGame/) to play the game
+Screenshots:
+![screenshot1](/images/screenshot1.png)<br><br>
+![screenshot2](/images/screenshot2.png)<br><br>
+![screenshot3](/images/screenshot3.png)<br><br>
