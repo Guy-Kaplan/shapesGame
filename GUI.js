@@ -2,45 +2,28 @@ var GUI = /** @class */ (function () {
     function GUI() {
     }
     GUI.prototype.showChromeMsg = function () {
-        alert("Open this game ONLY on GOOGLE CHROME!!!");
+        alert("This game was built for Google Chrome");
     };
-    GUI.prototype.checkFirstKelet = function (num) {
-        if (num != 1 && num != 2 && num != 3 && num != 4 && num != 5 && num != 6 && num != 7 && num != 8 && num != 9 && num != 10 && num != 11) {
-            document.write("<h2><b>Error 1: Select 1-11 ONLY, for the wanted shape</b></h2>");
-            document.write("<h2><b>Press F5 (Refresh)</b></h2>");
-            //let userRectangle: Rectangle = new Rectangle("black", 20, 10);
-            //userRectangle.drawFullRect();
-        }
+    GUI.prototype.displayFirstKeletError = function () {
+        alert("Error 1: Select 1-11 ONLY, for the wanted shape");
     };
-    GUI.prototype.checkThirdKelet = function (num) {
-        if (num != 1 && num != 2 && num != 3 && num != 4) {
-            document.write("<h2><b>Error 3: Select 1-4 ONLY</b></h2>");
-            document.write("<h2><b>Press F5 (Refresh)</b></h2>");
-        }
+    GUI.prototype.displaySecondKeletError = function () {
+        alert("Error 2: Enter a positive integer number ONLY");
     };
-    GUI.prototype.checkIsoSecondKelet = function (num) {
-        if (num < 3 || num % 2 != 1 || num != Math.floor(num)) {
-            document.write("<h2><b>Error 4: Enter a positive, greater than 3 and odd integer number ONLY</b></h2>");
-            document.write("<h2><b>Press F5 (Refresh)</b></h2>");
-        }
+    GUI.prototype.displayThirdKeletError = function () {
+        alert("Error 3: Select 1-5 ONLY");
     };
-    GUI.prototype.checkSecondKelet = function (num) {
-        if (num < 1 || num != Math.floor(num)) {
-            document.write("<h2><b>Error 2: Enter a positive integer number ONLY</b></h2>");
-            document.write("<h2><b>Press F5 (Refresh)</b></h2>");
-        }
+    GUI.prototype.displayFourthKeletError = function () {
+        alert("Error 4: Select a color");
     };
-    GUI.prototype.checkEllipseSecondKelet = function (num) {
-        if (num < 1 || num > 20) {
-            document.write("<h2><b>Error 5: Select 1-20 ONLY</b></h2>");
-            document.write("<h2><b>Press F5 (Refresh)</b></h2>");
-        }
+    GUI.prototype.displayIsoSecondKeletError = function () {
+        alert("Error 5: Enter a positive, greater than 3 and odd integer number ONLY");
     };
-    GUI.prototype.checkCircleSecondKelet = function (num) {
-        if (num < 1 || num > 4) {
-            document.write("<h2><b>Error 6: Select 1-4 ONLY, for the radius</b></h2>");
-            document.write("<h2><b>Press F5 (Refresh)</b></h2>");
-        }
+    GUI.prototype.displayEllipseSecondKeletError = function () {
+        alert("Error 6: Select 1-20 ONLY");
+    };
+    GUI.prototype.displayCircleSecondKeletError = function () {
+        alert("Error 7: Select 1-4 ONLY, for the radius");
     };
     GUI.prototype.getShape = function () {
         var shape;
@@ -114,7 +97,7 @@ var GUI = /** @class */ (function () {
     };
     GUI.prototype.getShapeContent = function () {
         var shapeContent;
-        shapeContent = Number(prompt("Select shape style:\n1) *****\n2) *   *\n3) 12345\n4) 54321"));
+        shapeContent = Number(prompt("Select shape style:\n1) *****\n2) *   *\n3) 12345\n4) 54321\n5) color"));
         return shapeContent;
     };
     GUI.prototype.getShapeColor = function () {
