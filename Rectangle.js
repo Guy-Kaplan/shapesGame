@@ -81,6 +81,17 @@ var Rectangle = /** @class */ (function (_super) {
         }
         document.write("</font>");
     };
+    Rectangle.prototype.drawColorRect = function () {
+        var newWidth = this.width * 10;
+        var newHeight = this.height * 10;
+        document.write("<canvas id='myCanvas' width='" + newWidth + "' height='" + newHeight + "'>"); //style='border:1px solid #d3d3d3;'
+        document.write("Your browser does not support the HTML5 canvas tag.</canvas>");
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = this.color;
+        ctx.fillRect(0, 0, newWidth, newHeight);
+        document.write("<br><br>");
+    };
     Rectangle.prototype.displayDetails = function () {
         _super.prototype.displayDetails.call(this);
         var perimeter = ((2 * this.width) + (2 * this.height));
