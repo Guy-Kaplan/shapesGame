@@ -1,4 +1,4 @@
-﻿class Square extends Shape {
+class Square extends Shape {
 
     private _size: number;
 
@@ -17,7 +17,7 @@
         return this._size;
     }
     //------------------Squares----------------------------------
-    public drawFullSquare(): void {
+    public drawFullSquare(): void { // 1
         let i: number;
         document.write(`<font color=${this.color}>`);
         for (i = 1; i <= this.size; i++) {
@@ -26,7 +26,7 @@
         document.write(`</font>`);
     }
 
-    public drawHaloolSquare(): void {
+    public drawHaloolSquare(): void { // 2
         let i: number;
         document.write(`<font color=${this.color}>`);
         for (i = 1; i <= this.size; i++) {
@@ -40,7 +40,7 @@
         document.write(`</font>`);
     }
 
-    public drawSquareOfNums(): void {
+    public drawSquareOfNums(): void { // 3
         let i: number;
         document.write(`<font color=${this.color}>`);
         for (i = 1; i <= this.size; i++) {
@@ -49,13 +49,26 @@
         document.write(`</font>`);
     }
 
-    public drawSquareOfReversedNums(): void {
+    public drawSquareOfReversedNums(): void { // 4
         let i: number;
         document.write(`<font color=${this.color}>`);
         for (i = 1; i <= this.size; i++) {
             this.drawReversedLineOfNums(this.size);
         }
         document.write(`</font>`);
+    }
+
+    public drawColorSquare(): void { // 5
+        let newWidth: number = this.size * 10;
+        let newHeight: number = this.size * 10;
+        document.write(`<canvas id='myCanvas' width='${newWidth}' height='${newHeight}'>`); //style='border:1px solid #d3d3d3;'
+        document.write("Your browser does not support the HTML5 canvas tag.</canvas>");
+        var c = document.getElementById("myCanvas");
+        var ctx = (<HTMLCanvasElement>c).getContext("2d");
+        ctx.fillStyle = this.color;
+        ctx.fillRect(0, 0, newWidth, newHeight);
+
+        document.write("<br><br>");
     }
 
     public displayDetails(): void {
